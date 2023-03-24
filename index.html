@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 时钟</title>
+        <link rel="stylesheet" type="text/css" href="src/clock.css" />
+        <script src="src/jquery.min.js"></script>
+        <script type="text/javascript" src="src/clock.js"></script>
+</head>
+<body>
+    <header style="display: flex;">
+        <h1 style="margin: 0 auto;">Web 时钟</h1>
+    </header>
+    <div class="clocks">
+        <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+    <footer style="display: flex;">
+        <div id="times" style="margin: 0 auto;font-size: 25px;">
+        </div>
+        <script type="text/javascript">
+            function  getDate(){
+                var date=new Date();
+                var yyyy=date.getFullYear();  //获取年份
+                var MM=date.getMonth();       //获取月份
+                var dd=date.getDate();        //获取日
+                var hh=date.getHours();       //获取时
+                var mm=date.getMinutes();     //获取分钟
+                var ss=date.getSeconds();     //获取秒
+                var div1=document.getElementById("times"); 
+                div1.innerHTML =yyyy+"年"+MM+"月"+dd+"日"+hh+"点"+mm+"分"+ss+"秒";
+            }
+            setInterval("getDate();",1000);
+        </script>
+    </footer>
+</body>
+</html>

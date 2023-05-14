@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>播放视频</title>
+</head>
+<style>
+    div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<body>
+    <div>
+        <video class="video" width="320" height="240" controls autoplay>
+            <source src="bo.mp4" type="video/ogg">
+            <source src="bo.mp4" type="video/mp4">
+            <source src="bo.mp4" type="video/webm">
+            <object data="bo.mp4" width="320" height="240">
+                <embed width="320" height="240" src="bo.mp4">
+            </object>
+        </video>
+
+        <video class="video" width="320" height="240" controls autoplay>
+            <source src="po.mp4" type="video/ogg">
+            <source src="po.mp4" type="video/mp4">
+            <source src="po.mp4" type="video/webm">
+            <object data="po.mp4" width="320" height="240">
+                <embed width="320" height="240" src="po.mp4">
+            </object>
+        </video>
+    </div>
+
+</body>
+
+</html>
